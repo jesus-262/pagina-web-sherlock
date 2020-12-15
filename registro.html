@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Pruebas</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="shortcut icon" href="./assets/logo-title.png">
+	<script src="./js/jquery-2.1.3.min.js"></script>
+	
+	
+	<link rel="stylesheet" href="fonts.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,100' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:700,500' rel='stylesheet' type='text/css'>
+	<link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+</head>
+<body>
+<div class="Registro_body">
+		<img  src="images/Bg_blurred.jpg">
+</div>
+	<section class="section_registro">
+		<div class="item header">
+			<div class="item collection">
+				<img src="./assets/logo-Big.png"><h1>SHERLOCK</h1>
+				
+			</div>
+		</div>
+		<div class="item body">
+			<form id="registro" name="" method="POST" action="<?php echo _URL;?>usuarios/create" enctype="">
+
+				<div class="form header">
+					<h2>Registro</h2>
+					<h3>Llene los campos a continuación.</h3>
+				</div>
+				<span>Nombres</span>
+				<div class="item input-image">
+					<img src="./assets/Person.png">
+					<input name="nombre" placeholder="" type="text" required>
+				</div>	
+				<span>Apellidos</span>
+				<div class="item input-image">
+					<img src="./assets/Person.png">
+					<input name="apellido" placeholder="" type="text" required>	
+				</div>
+				<span>Correo</span>
+				<div class="item input-image">
+					<img src="./assets/Email.png">
+					<input name="correo" placeholder="" type="email" data-url="<?php echo _URL; ?>Usuarios/checkEmail" onchange="changeInput(this);" required>
+				</div>
+				<span>Correo alterno</span>
+				<div class="item input-image">
+					<img src="./assets/Email.png">
+					<input name="correoAlterno" placeholder="" type="email">
+				</div>
+				<span>Nombre de usuario</span>
+				<div class="item input-image">
+					<img src="./assets/Avatar.png">
+					<input name="nombreUsuario" placeholder="" type="text" data-url="<?php echo _URL; ?>Usuarios/checkNameUser" onchange="changeInput(this);" required>
+				</div>
+				<span>Contraseña</span>
+				<div class="item input-image">
+					<img src="./assets/Lock.png">
+					<input name="contrasena" placeholder="" type="password" required>
+				</div>
+				<input name="rol" type="text" value="1" style="display:none">
+				<div class="item clear-single">				
+					<input class="button clear-left" name="" type="submit">
+				</div>	
+			</form>
+		</div>
+	</section>
+</body>
+
+</html>
+
+
+
